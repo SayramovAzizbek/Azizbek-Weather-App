@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="site-body">
+
+    <main>
+        <section id="weather-section">
+            <div class="container">
+                <div class="weather-box">
+                    <ul class="main-weather-list"></ul>
+                    <div class="weather-form-box">
+                        <div class="searched-weather-cities">
+                            <h3 class="searched-title">Searched cities</h3>
+                            <ul class="searched-list"></ul>
+                        </div>
+                        <div class="main-weather-res-part">
+                            <form class="weather-form">
+                                <input class="weather-input" name="weather_location" type="search"
+                                    placeholder="Search city's weather">
+                                <button class="weather-search-btn" type="submit">Search</button>
+                            </form>
+                            <div class="weather-main-restult-box">
+                            </div>
+                            <div class="weather-not-found-card">
+                                <h3 class="weather-not-found-title"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="hours-weather-list"></ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <template class="main-weather-template">
+        <li class="main-weather-item">
+            <h3 class="main-weather-title"></h3>
+            <p class="main-weather-temp-text main-weather-text"><span class="main-weather-temp"></span>°C</p>
+            <p class="main-weather-temp-feels main-weather-text"></p>
+            <div class="main-weather-info-box">
+                <p class="main-weather-desc-name main-weather-text"></p>
+                <p class="main-weather-time main-weather-text"></p>
+            </div>
+        </li>
+    </template>
+
+    <template class="search-weather-template">
+        <li class="searched-item">
+            <button class="searched-item-btn" type="button"></button>
+        </li>
+    </template>
+
+    <template class="weather-template">
+        <div class="weather-result-box">
+            <h3 class="weather-city-name"></h3>
+            <p class="weather-date"></p>
+            <div class="weather-info">
+                <div class="weather-temp-box">
+                    <div class="weather-main-temp">
+                        <p class="weather-temp-text weather-text"><span class="weather-temp"></span>°C</p>
+                        <img class="weather-icon" src="" alt="">
+                    </div>
+                    <div class="weather-temp-info-box">
+                        <p class="weather-temp-feels weather-text"></p>
+                        <p class="weather-desc-name weather-text"></p>
+                    </div>
+                </div>
+                <div class="weather-another-info-box">
+                    <p class="weather-speed weather-text"></p>
+                    <p class="weather-pressure weather-text"></p>
+                    <p class="weather-humidity weather-text"></p>
+                </div>
+            </div>
+            <div class="weather-suntime-map">
+                <div class="weather-suntime-box">
+                    <p class="weather-sunrise weather-text"></p>
+                    <p class="weather-sunset weather-text"></p>
+                </div>
+                <a class="weather-link" href="" target="blank"></a>
+            </div>
+        </div>
+    </template>
+
+    <template class="hours-weather-template">
+        <li class="hours-weather-item">
+            <p class="hours-weather-time hours-weather-text"></p>
+            <!-- <p class="hours-weather-time-text hours-weather-text"></p> -->
+            <p class="hours-weather-main-temp hours-weather-text"><span class="hours-weather-temp"></span>°C</p>
+            <p class="hours-weather-feels-like hours-weather-text"></p>
+            <div class="hours-weather-desc-box">
+                <p class="hours-weather-desc-name hours-weather-text"></p>
+                <img class="hours-weather-icon" src="" width="50" height="50" alt="">
+            </div>
+            <div class="hours-weather-info">
+                <p class="hours-weather-wind-speed hours-weather-text"></p>
+                <p class="hours-weather-pressure hours-weather-text"></p>
+                <p class="hours-weather-humidity hours-weather-text"></p>
+            </div>
+        </li>
+    </template>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
