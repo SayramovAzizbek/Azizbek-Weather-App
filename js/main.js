@@ -225,9 +225,10 @@ weatherForm.addEventListener("submit", (evt) => {
 
       cloneWeatherTemplate.querySelector(".weather-link").href = `https://openweathermap.org/weathermap?basemap=map&cities=false&layer=${data.weather.main}&lat=${data.coord.lat}&lon=${data.coord.lon}&zoom=5`;
 
+      // ! Rendering hourly Weather API
       async function weatherHourlyRender(weatherCityName) {
         try {
-          const hoursRes = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&weather?q=${weatherCityName}&appid=c33dbb5643d0ba100b8f51f9f0277ac8&units=metric`
+          const hoursRes = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&weather?q=${weatherCityName}&appid=c33dbb5643d0ba100b8f51f9f0277ac8&units=metric`
           );
 
           let hoursData = await hoursRes.json();
